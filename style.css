@@ -13,7 +13,6 @@ header {
     background-color: #fff;
     overflow: hidden;
     z-index: 1;
-    background-color: #eaeaef;
 }
 
 header div {
@@ -22,38 +21,20 @@ header div {
     align-items: center;
 }
 
-.logo {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    display: flex;
-    align-items: center;
+header .logo img {
+    width: 500px;
+    height: auto;
+    margin: -25px 0 0 -100px;
+    
 }
 
-.logo a {
-    text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-    color: #060613;
-    font-size: 2rem;
-    letter-spacing: 1;
-    margin-left: 10px;
-    text-decoration: none;
-    order: 2;
-}
 
-.logo img {
-    height: 70px;
-    width: auto;
-    display: block;
-    order: 1;
-
-}
 
 header .nav {
     position: absolute;
     top: 0;
     right: 0;
-    margin-right: 150px;
+    margin-right: 200px;
 }
 
 header .nav ul {
@@ -93,8 +74,7 @@ section {
 
 }
 
-.half1,
-.half2 {
+.half1,.half2 {
     width: 50%;
 }
 
