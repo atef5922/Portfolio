@@ -56,8 +56,10 @@ header .nav ul li a {
 
 header .nav ul li a:hover {
     color: #dbdde3;
-    background-color: #060613;
-    transition: 0.5s;
+    background-color: #3c3ce3;
+    box-shadow: 5px 10px 30px rgba(130, 147, 255, 0.5);
+    transition: all 0.2s ease-in 0.1s;
+    outline: none;
 
 }
 
@@ -205,4 +207,79 @@ header .nav ul li a:hover {
 
 /*Section Three End */
 
+/*Services Section Start*/
+.service {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 45px;
+}
 
+.ser1,
+.ser2 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ser2 {
+    margin-top: 30px;
+}
+
+.ser1 div,
+.ser2 div {
+    width: 32%;
+    float: left;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.service i {
+    font-size: 45px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.service h1 {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.service p {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+}
+
+
+
+.ser1 div:hover{
+    background-color: #8293ff;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 5px 10px 30px rgba(130, 147, 255, 0.5);
+    outline: none;
+}
+.ser1 div:hover i{
+    color: white;
+}
+.ser1 div:hover h1{
+    color: white;
+}
+.ser1 div:hover p{
+    color: white;
+}
+.ser2 div:hover{
+    background-color: #8293ff;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 5px 10px 30px rgba(130, 147, 255, 0.5);
+    outline: none;
+}
+.ser2 div:hover i{
+    color: white;
+}
+.ser2 div:hover h1{
+    color: white;
+}
+.ser2 div:hover p{
+    color: white;
+}
+
+/*Services Section End*/
