@@ -25,10 +25,8 @@ header .logo img {
     width: 500px;
     height: auto;
     margin: -25px 0 0 -100px;
-    
+
 }
-
-
 
 header .nav {
     position: absolute;
@@ -64,7 +62,7 @@ header .nav ul li a:hover {
 }
 
 /*SECTION  STYLES*/
-section {
+.section1 {
     background-color: #f9f9ff;
     width: 100%;
     height: 700px;
@@ -72,9 +70,11 @@ section {
     justify-content: space-between;
     align-items: center;
 
+
 }
 
-.half1,.half2 {
+.half1,
+.half2 {
     width: 50%;
 }
 
@@ -194,7 +194,7 @@ section {
 
 .firsttext h1 {
     font-size: 40px;
-    line-height: 10px;
+    line-height: 20px;
 }
 
 .firsttext p {
@@ -202,3 +202,7 @@ section {
     color: rgba(0, 0, 0, 0.6);
     margin: 0 auto;
 }
+
+/*Section Three End */
+
+
