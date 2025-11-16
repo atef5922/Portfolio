@@ -283,3 +283,28 @@ header .nav ul li a:hover {
 }
 
 /*Services Section End*/
+
+/*Section Four Start*/
+.section4{
+    width: 100%;
+    height: 300px;
+    background-color: #8293ff;
+}
+.section4 div{
+    float: left;
+    width: 20%;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    left: 200px;
+    overflow: hidden;
+}
+.section4 h1{
+    font-size: 45px;
+    line-height: 0px;
+}
+.section4 h1,.section4 p{
+    text-align: center;
+    color: white;
+}
+/*Section Four End*/
