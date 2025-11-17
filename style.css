@@ -417,3 +417,137 @@ header .nav ul li a:hover {
 }
 
 /* NEW PROJECT SECTION STYLES END*/
+
+/* EDUCATION SECTION STYLES START */
+.education-section {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #f8f9fa; /* Light background */
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: #4a69ff; /* Blue heading */
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.education-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background-color: #4a69ff; /* Blue underline */
+    border-radius: 2px;
+}
+
+.timeline-container {
+    position: relative;
+    width: 90%;
+    max-width: 900px; /* Slightly wider cards */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+}
+
+/* Remove the vertical line as it's not present in the new design */
+.timeline::before {
+    display: none;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px; /* This adds the gap between cards */
+    text-align: left;
+    background: #ffffff; /* White card background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    display: flex; /* Use flexbox for icon and content layout */
+    align-items: flex-start; /* Align items to the top */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Remove the margin from the last item to avoid extra space */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-icon {
+    position: static; /* Remove absolute positioning */
+    transform: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px; /* Square with rounded corners */
+    background: #eef1ff; /* Light blue background for icon */
+    color: #4a69ff; /* Blue icon color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    z-index: 1;
+    border: none; /* Remove border */
+    margin-right: 25px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.timeline-content {
+    background: none; /* No background for content, as it's part of the item's background */
+    padding: 0; /* Remove padding, handled by item */
+    box-shadow: none; /* Remove shadow, handled by item */
+    flex-grow: 1; /* Allow content to take available space */
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #343a40; /* Darker text for title */
+}
+
+.timeline-content h4 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6c757d; /* Gray for institution */
+    margin: 0 0 15px 0;
+}
+
+.info-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0; /* No margin below if only one pill */
+    position: absolute; /* Position the pill to the right */
+    top: 30px;
+    right: 30px;
+}
+
+.info-pills span {
+    background-color: #e6e6ff; /* Light blue pill background */
+    color: #4a69ff; /* Blue pill text color */
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.timeline-content p {
+    font-size: 15px;
+    color: #495057; /* Darker gray for description */
+    line-height: 1.6;
+    margin: 0;
+}
+/* EDUCATION SECTION STYLES END */
