@@ -185,6 +185,7 @@ header .nav ul li a.nav-active::after {
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
     padding: 5px 0px;
     z-index: 1;
+    background: transparent;
 }
 
 .iconArea a {
@@ -216,9 +217,12 @@ header .nav ul li a.nav-active::after {
     color: #0e76a8;
 }
 
-.iconArea a:hover .fa-youtube {
-    color: #E60023;
+.iconArea a:hover .fa-github {
+    color: #0a0a0a;
+    
 }
+
+
 
 /*sECTION oNE eND*/
 
