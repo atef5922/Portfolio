@@ -35,13 +35,16 @@ header .nav {
     margin-right: 200px;
 }
 
+/* --- UPDATED: Header Nav with Flexbox --- */
 header .nav ul {
     list-style: none;
+    display: flex;
+    gap: 40px; /* Replaces padding-right on li */
 }
 
 header .nav ul li {
-    float: left;
-    padding-right: 40px;
+    /* float: left; (Replaced by flex) */
+    /* padding-right: 40px; (Replaced by gap) */
     padding-top: 10px;
 }
 
@@ -52,6 +55,8 @@ header .nav ul li a {
     font-size: 13px;
     font-weight: bold;
     text-align: center;
+    position: relative; /* <-- ADDED */
+    padding-bottom: 5px; /* <-- ADDED */
 }
 
 header .nav ul li a:hover {
@@ -63,7 +68,27 @@ header .nav ul li a:hover {
 
 }
 
-/*SECTION1  STYLES*/
+/* --- NEW: Active Nav Link Styles --- */
+header .nav ul li a.nav-active {
+    color: #4a69ff;
+    font-weight: bold;
+}
+
+header .nav ul li a.nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 3px;
+    background-color: #4a69ff;
+    border-radius: 2px;
+}
+/* --- END: Active Nav Link Styles --- */
+
+
+/* --- SECTION1 STYLES --- */
 .section1 {
     background-color: #f9f9ff;
     width: 100%;
@@ -85,16 +110,30 @@ header .nav ul li a:hover {
     margin-bottom: 120px;
 }
 
+/* --- UPDATED: .half2 (Hero Image) --- */
 .half2 {
     padding-right: 50px;
-    margin-top: 50px;
+    margin-top: -50px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .half2 img {
-    width: auto;
-    height: 400px;
-    border-radius: 10px;
+    width: 300px;
+    height: 300px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 5px solid #4a69ff; 
+    box-shadow: 0 0 0 8px rgba(74, 105, 255, 0.2); 
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; 
 }
+
+.half2 img:hover {
+    transform: scale(1.05) rotate(2deg); 
+    box-shadow: 0 0 0 10px rgba(74, 105, 255, 0.3), 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+/* --- END: .half2 Update --- */
 
 .half1 h3 {
     font-weight: normal;
@@ -108,7 +147,8 @@ header .nav ul li a:hover {
     color: rgba(78, 78, 78, 0.7);
 }
 
-.half1 input {
+
+.half1 .discover-button {
     padding: 12px 25px;
     background-color: #8393ff;
     outline: none;
@@ -116,9 +156,10 @@ header .nav ul li a:hover {
     border: 1px solid #8393ff;
     font-size: 15px;
     cursor: pointer;
+    text-decoration: none; 
 }
 
-.half1 input:hover {
+.half1 .discover-button:hover {
     box-shadow: 5px 10px 30px rgba(130, 147, 255, 0.5);
     transition: all 0.5s ease-in 0.1s;
     outline: none;
@@ -140,16 +181,29 @@ header .nav ul li a:hover {
     margin: 0 auto;
 }
 
-.section2 img {
-    width: auto;
-    height: 400px;
-    border-radius: 10px;
-}
-
+/* --- UPDATED: .section2 img (About Me Image) --- */
 .section2 .img2 {
     padding-left: 150px;
-
+    display: flex; /* Add flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
+
+.section2 img {
+    width: 300px; /* Set fixed width */
+    height: 300px; /* Set fixed height */
+    border-radius: 50%; /* Make it a perfect circle */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 5px solid #4a69ff; /* Add a professional border */
+    box-shadow: 0 0 0 8px rgba(74, 105, 255, 0.2); /* Outer shadow for depth */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transitions for hover effects */
+}
+
+.section2 img:hover {
+    transform: scale(1.05) rotate(-2deg); /* Slightly enlarge and rotate on hover */
+    box-shadow: 0 0 0 10px rgba(74, 105, 255, 0.3), 0 10px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+/* --- END: .section2 img Update --- */
 
 .text2 h3 {
     font-weight: normal;
@@ -196,13 +250,7 @@ header .nav ul li a:hover {
     box-sizing: border-box;
 }
 
-.firsttext h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    color: #222;
-    margin-bottom: 15px;
-}
-
+/* This 'p' tag style was moved down to be with the .firsttext h1 */
 .firsttext p {
     width: 100%;
     max-width: 600px;
@@ -282,23 +330,25 @@ header .nav ul li a:hover {
 
 /*Services Section End*/
 
-/*Section Four Start*/
-.section4 {
+/* --- UPDATED: Section Four (Stats) with Flexbox --- */
+/*.section4 {
     width: 100%;
     height: 300px;
     background-color: #8293ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .section4 div {
-    float: left;
+    
     width: 20%;
-    margin: 0 auto;
-    position: relative;
-    top: 100px;
-    left: 200px;
+   
     overflow: hidden;
-}
-
+}*/
+/* --- END: Section 4 Update --- */
+/*
 .section4 h1 {
     font-size: 45px;
     line-height: 0px;
@@ -308,7 +358,7 @@ header .nav ul li a:hover {
 .section4 p {
     text-align: center;
     color: white;
-}
+}*/
 
 /*Section Four End*/
 
@@ -319,12 +369,6 @@ header .nav ul li a:hover {
     padding: 100px 0;
     background-color: #f9f9ff;
     text-align: center;
-}
-
-.project-section h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
-    color: #4a69ff;
 }
 
 .project-filters {
@@ -421,25 +465,27 @@ header .nav ul li a:hover {
 
 /* NEW PROJECT SECTION STYLES END*/
 
-/* EDUCATION SECTION STYLES START */
 
-.education-section {
-    width: 100%;
-    padding: 50px 0;
-    background-color: #f8f9fa;
-    text-align: center;
-}
+/* --- NEW: UNIFIED SECTION TITLE STYLES --- */
+/* This single block now styles the titles for Services, Projects, Education, and Contact */
 
-.education-section h2 {
-    font-size: 40px;
+.firsttext h1,
+.project-section h2,
+.education-section h2,
+.contact-section h2 {
+    font-size: 40px; /* Standardized size (2.5rem = 40px) */
     margin-bottom: 60px;
     color: #4a69ff;
     font-weight: bold;
     position: relative;
     display: inline-block;
+    line-height: 1.2;
 }
 
-.education-section h2::after {
+.firsttext h1::after,
+.project-section h2::after,
+.education-section h2::after,
+.contact-section h2::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -449,6 +495,19 @@ header .nav ul li a:hover {
     height: 4px;
     background-color: #4a69ff;
     border-radius: 2px;
+}
+
+/* --- END OF UNIFIED STYLES --- */
+
+
+/* EDUCATION SECTION STYLES START */
+/* The h2 styles were moved to the unified block above */
+
+.education-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
 }
 
 .timeline-container {
@@ -556,32 +615,13 @@ header .nav ul li a:hover {
 /* EDUCATION SECTION STYLES END */
 
 /* CONTACT SECTION STYLES START */
+/* The h2 styles were moved to the unified block above */
+
 .contact-section {
     width: 100%;
     padding: 50px 0;
     background-color: #f8f9fa;
     text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 40px;
-    margin-bottom: 60px;
-    color: #4a69ff;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-}
-
-.contact-section h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-    width: 60px;
-    height: 4px;
-    background-color: #4a69ff;
-    border-radius: 2px;
 }
 
 .contact-container {
@@ -745,3 +785,37 @@ header .nav ul li a:hover {
 }
 
 /* FOOTER SECTION STYLES END */
+
+
+/* --- NEW: Typing Animation Styles --- */
+.half1 p.typing-text {
+    color: rgba(78, 78, 78, 0.7);
+    font-size: 2rem; 
+    font-weight: 300;
+    height: 30px; 
+}
+
+.half1 .typing-text #typed-text {
+    font-weight: 300; 
+    color: #2b17db;
+}
+
+.half1 .cursor {
+    display: inline-block;
+    background-color: #555;
+    margin-left: 3px;
+    width: 3px; 
+    height: 2rem; 
+    animation: blink 1s infinite;
+    vertical-align: middle; 
+}
+
+/* Blinking animation */
+@keyframes blink {
+    0% { background-color: #555; }
+    49% { background-color: #555; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100% { background-color: #555; }
+}
+/* --- END: Typing Animation Styles --- */
