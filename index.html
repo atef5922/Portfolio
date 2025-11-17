@@ -173,16 +173,17 @@
             <button class="filter-btn" data-filter="c">C Programming</button>
             <button class="filter-btn" data-filter="js">JavaScript</button>
             <button class="filter-btn" data-filter="flutter">Flutter</button>
+            <button class="filter-btn" data-filter="php">PHP</button>
         </div>
 
         <div class="project-grid">
-            
-            <!-- Project Card 1: Portfolio -->
+
             <div class="project-card web js">
-                <img src="https://via.placeholder.com/350x200?text=Portfolio+Website" alt="Portfolio Website Screenshot">
+                <img src="p1.png" alt="Portfolio Website Screenshot">
                 <div class="project-content">
                     <h3>Portfolio Website</h3>
-                    <p>A responsive portfolio website built with HTML, CSS, and JavaScript to showcase my work and skills.</p>
+                    <p>A responsive portfolio website built with HTML, CSS, and JavaScript to showcase my work and
+                        skills.</p>
                     <div class="project-tags">
                         <span>HTML</span>
                         <span>CSS</span>
@@ -191,12 +192,42 @@
                 </div>
             </div>
 
-            <!-- Project Card 2: Healthcare -->
-            <div class="project-card c">
-                <img src="https://via.placeholder.com/350x200?text=Healthcare+System" alt="Healthcare Management System">
+            <div class="project-card web">
+                <img src="p2.png" alt="Travello Website Screenshot">
                 <div class="project-content">
-                    <h3>Healthcare Management System</h3>
-                    <p>A C-based application for managing patient records, appointments, and medical staff with features like add, delete, and search.</p>
+                    <h3>Travello</h3>
+                    <p>At Travello, we believe that every
+                        journey should be an adventure, every destination a discovery, and every moment an opportunity
+                        for enriching encounters.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card web php">
+                <img src="home.png"
+                    alt="DIU Student Portal Screenshot">
+                <div class="project-content">
+                    <h3>Diu-Student-Portal</h3>
+                    <p>A web portal for students built with HTML, CSS, and PHP. (Add your project description here).</p>
+                    <div class="project-tags">
+                        <span>PHP</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>MySql</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card c">
+                <img src="p4.jpeg" alt="Phonebook Management System">
+                <div class="project-content">
+                    <h3>Phonebook Management System</h3>
+                    <p>A C-based console application to manage contacts. It allows users to add, search, update, and
+                        delete contact information, storing data in files.</p>
                     <div class="project-tags">
                         <span>C Programming</span>
                         <span>Data Structures</span>
@@ -205,12 +236,12 @@
                 </div>
             </div>
 
-            <!-- Project Card 3: Library -->
             <div class="project-card c">
-                <img src="https://via.placeholder.com/350x200?text=Library+System" alt="Library Management System">
+                <img src="p5.png" alt="Bank Management System">
                 <div class="project-content">
-                    <h3>Library Management System</h3>
-                    <p>A comprehensive library management system built with C programming to handle books, members, and transactions efficiently.</p>
+                    <h3>Bank Management System</h3>
+                    <p>A comprehensive banking application built with C programming to manage customer accounts,
+                        deposits, withdrawals, and transactions securely.</p>
                     <div class="project-tags">
                         <span>C Programming</span>
                         <span>Data Structures</span>
@@ -219,12 +250,14 @@
                 </div>
             </div>
 
-            <!-- project card 4: Medicine -->
             <div class="project-card flutter">
-                <img src="https://via.placeholder.com/350x200?text=MedIQ+App" alt="MedIQ Medicine Reminder App">
+                <img src="p3.png" alt="MedIQ Medicine Reminder App">
                 <div class="project-content">
                     <h3>MedIQ – Medicine Reminder App</h3>
-                    <p>MedIQ is a powerful and easy-to-use Flutter application designed to help users manage their medication schedules efficiently. With Firebase authentication and local database support via sqflite, MedIQ ensures your data is secure, synchronized, and accessible — even offline. Never miss a dose again!</p>
+                    <p>MedIQ is a powerful and easy-to-use Flutter application designed to help users manage their
+                        medication schedules efficiently. With Firebase authentication and local database support via
+                        sqflite, MedIQ ensures your data is secure, synchronized, and accessible — even offline. Never
+                        miss a dose again!</p>
                     <div class="project-tags">
                         <span>Flutter</span>
                         <span>Firebase</span>
@@ -238,9 +271,36 @@
 
     <!--  NEW PROJECT SECTION END -->
 
+    <!-- Project Section Javascript-->
 
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
 
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove 'active' class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add 'active' class to clicked button
+                    button.classList.add('active');
+
+                    const filter = button.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.classList.contains(filter)) {
+                            card.style.display = 'block'; // Show card
+                        } else {
+                            card.style.display = 'none'; // Hide card
+                        }
+                    });
+                });
+            });
+        });
+
+    </script>
+
+    <!-- Project Section Javascript End-->
 
 </body>
 
